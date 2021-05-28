@@ -38,7 +38,7 @@ Will create list of job ads that candidate has applied to and list of candidates
 ## Examples
 After you initialized your local server with *app.py*, you can send HTTP requests to it.
 Here are examples of sending requests to the API using Python.
-#### Get candidate with ID=1
+### Get candidate with ID=1
 ##### Request:
 ```python
 import requests
@@ -68,7 +68,7 @@ print(respContent)
 }
 ```
 
-#### Create new candidate
+### Create new candidate
 * Header **Content-Type** has to be set to **application/json**
 * Request body has to contain:
     * name *string*
@@ -98,7 +98,7 @@ print(respContent)
 }
 ```
 
-#### Update candidate with ID=2
+### Update candidate with ID=2
 Similar to creating a new candidate, but now you have to specify candidate id in url.
 ##### Request:
 ```python
@@ -112,7 +112,7 @@ body = {
 requests.put(url, json=body)
 ```
 
-#### Create new job ad
+### Create new job ad
 * Header **Content-Type** has to be set to **application/json**.
 * Request body has to contain: 
     * title *string*
@@ -142,7 +142,7 @@ print(respContent)
 }
 ```
 
-#### Candidate (with candidate ID=2) applies to a job ad (with ad ID=1)
+### Candidate (with candidate ID=2) applies to a job ad (with ad ID=1)
 Creates a list of job ads in candidate and list of candidates in job ad.
 ##### Request:
 ```python
