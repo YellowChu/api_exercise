@@ -8,7 +8,7 @@ information when candidate applies for a job.
 1. Install dependencies in *requirements.txt*
 2. Enter provided database connection string in *line 10* in *app.py*
     ```python
-   cluster = MongoClient("enter provided database connection string")
+   connection_string = "enter provided database connection string"
     ```
 3. Run *app.py*
 4. Server runs on *localhost:5000*

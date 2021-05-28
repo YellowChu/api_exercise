@@ -7,9 +7,11 @@ from api_endpoints.job_ads import getAdResponse, addAdResponse, editAdResponse
 ########################################
 # Connection String Provided by Author #
 ########################################
-cluster = MongoClient("enter provided database connection string")
+connection_string = "enter provided database connection string"
 
+cluster = MongoClient(connection_string)
 db = cluster["data_sentics"]
+
 candidates_db = db["candidates"]
 job_ads_db = db["job_ads"]
 used_ids_db = db["used_ids"]
