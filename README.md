@@ -11,7 +11,7 @@ information when candidate applies for a job.
    cluster = MongoClient("enter provided database connection string")
     ```
 3. Run *app.py*
-4. Server run on *localhost:5000*
+4. Server runs on *localhost:5000*
 
 ## Endpoints
 ### Candidates
@@ -50,7 +50,7 @@ response = requests.get(url)
 respContent = json.loads(response.content)
 print(respContent)
 ```
-#####Response:
+##### Response:
 ```json
 {
     "candidates": [
@@ -68,13 +68,13 @@ print(respContent)
 }
 ```
 
-####Create new candidate
+#### Create new candidate
 * Header **Content-Type** has to be set to **application/json**
 * Request body has to contain:
     * name *string*
     * pay *int*
     * skills *list of strings*.
-#####Request:
+##### Request:
 ```python
 import requests
 import json
@@ -90,7 +90,7 @@ response = requests.post(url, json=body)
 respContent = json.loads(response.content)
 print(respContent)
 ```
-#####Response:
+##### Response:
 ```json
 {
     "candidate_id": 2,
@@ -98,9 +98,9 @@ print(respContent)
 }
 ```
 
-####Update candidate with ID=2
+#### Update candidate with ID=2
 Similar to creating a new candidate, but now you have to specify candidate id in url.
-#####Request:
+##### Request:
 ```python
 import requests
 
@@ -112,13 +112,13 @@ body = {
 requests.put(url, json=body)
 ```
 
-####Create new job ad
+#### Create new job ad
 * Header **Content-Type** has to be set to **application/json**.
 * Request body has to contain: 
     * title *string*
     * salary *int*
     * description *string*
-#####Request:
+##### Request:
 ```python
 import requests
 import json
@@ -134,7 +134,7 @@ response = requests.post(url, json=body)
 respContent = json.loads(response.content)
 print(respContent)
 ```
-#####Response:
+##### Response:
 ```json
 {
     "ad_id": 1,
@@ -142,9 +142,9 @@ print(respContent)
 }
 ```
 
-####Candidate (with candidate ID=2) applies to a job ad (with ad ID=1)
+#### Candidate (with candidate ID=2) applies to a job ad (with ad ID=1)
 Creates a list of job ads in candidate and list of candidates in job ad.
-#####Request:
+##### Request:
 ```python
 import requests
 import json
@@ -155,7 +155,7 @@ response = requests.get(url)
 respContent = json.loads(response.content)
 print(respContent)
 ```
-#####GET candidate with ID=2 Response:
+##### GET candidate with ID=2 Response:
 ```json
 {
     "candidates": [
@@ -180,7 +180,7 @@ print(respContent)
     "success": true
 }
 ```
-#####GET job ad with ID=1 Response:
+##### GET job ad with ID=1 Response:
 ```json
 {
     "job_ads": [
