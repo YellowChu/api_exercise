@@ -103,13 +103,16 @@ Similar to creating a new candidate, but now you have to specify candidate id in
 ##### Request:
 ```python
 import requests
+import json
 
 url = "http://localhost:5000/api/v1.0/candidates/2"
 body = {
     "name": "Tony Stark"
 }
 
-requests.put(url, json=body)
+response = requests.put(url, json=body)
+respContent = json.loads(response.content)
+print(respContent)
 ```
 
 ### Create new job ad
@@ -126,7 +129,7 @@ import json
 url = "http://localhost:5000/api/v1.0/ads/"
 body = {
     "title": "Super Hero",                  
-    "pay": 0,                         
+    "salary": 0,                         
     "description": "Helping people."      
 }
 
