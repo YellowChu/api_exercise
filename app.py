@@ -1,13 +1,15 @@
-# external dependencies
 from pymongo import MongoClient
 from flask import Flask, request
-# internal dependencies
+
 from api_endpoints.candidates import getCandidateResponse, addCandidateResponse, editCandidateResponse, addApplicationAndApplicant
 from api_endpoints.job_ads import getAdResponse, addAdResponse, editAdResponse
 
+########################################
+# Connection String Provided by Author #
+########################################
 cluster = MongoClient("enter provided database connection string")
-db = cluster["data_sentics"]
 
+db = cluster["data_sentics"]
 candidates_db = db["candidates"]
 job_ads_db = db["job_ads"]
 used_ids_db = db["used_ids"]

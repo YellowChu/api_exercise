@@ -6,7 +6,7 @@ information when candidate applies for a job.
 
 ## Getting started
 1. Install dependencies in *requirements.txt*
-2. Enter provided database connection string in *line 8* in *app.py*
+2. Enter provided database connection string in *line 10* in *app.py*
     ```python
    cluster = MongoClient("enter provided database connection string")
     ```
